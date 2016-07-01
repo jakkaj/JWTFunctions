@@ -1,0 +1,63 @@
+{
+  "locked": false,
+  "version": 2,
+  "targets": {
+    ".NETFramework,Version=v4.6": {
+      "Microsoft.IdentityModel.Protocol.Extensions/1.0.2.206221351": {
+        "type": "package",
+        "dependencies": {
+          "System.IdentityModel.Tokens.Jwt": "4.0.2.206221351"
+        },
+        "compile": {
+          "lib/net45/Microsoft.IdentityModel.Protocol.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.IdentityModel.Protocol.Extensions.dll": {}
+        }
+      },
+      "System.IdentityModel.Tokens.Jwt/4.0.2.206221351": {
+        "type": "package",
+        "compile": {
+          "lib/net45/System.IdentityModel.Tokens.Jwt.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.IdentityModel.Tokens.Jwt.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.IdentityModel.Protocol.Extensions/1.0.2.206221351": {
+      "sha512": "3uzp0TnBa7jJj0iq8THarL+D/tcVkL5nJOLA1ewwXvI4DzlDKMQWN+Rd8o07uX72VIuMRyR7CIhB9rnwvYK1wg==",
+      "type": "package",
+      "files": [
+        "Microsoft.IdentityModel.Protocol.Extensions.1.0.2.206221351.nupkg.sha512",
+        "Microsoft.IdentityModel.Protocol.Extensions.nuspec",
+        "lib/net45/Microsoft.IdentityModel.Protocol.Extensions.XML",
+        "lib/net45/Microsoft.IdentityModel.Protocol.Extensions.dll",
+        "lib/net45/Microsoft.IdentityModel.Protocol.Extensions.pdb"
+      ]
+    },
+    "System.IdentityModel.Tokens.Jwt/4.0.2.206221351": {
+      "sha512": "bBOwCeNaLK86xlBwAjuQ772eHFekr4pQQmPwgcVfQ2OMqGILCJp8YCEZfT3YBSYw3WEFM04vfLST4hmDtuKePQ==",
+      "type": "package",
+      "files": [
+        "System.IdentityModel.Tokens.Jwt.4.0.2.206221351.nupkg.sha512",
+        "System.IdentityModel.Tokens.Jwt.nuspec",
+        "lib/net45/System.IdentityModel.Tokens.Jwt.Xml",
+        "lib/net45/System.IdentityModel.Tokens.Jwt.dll",
+        "lib/net45/System.IdentityModel.Tokens.Jwt.pdb"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "": [],
+    ".NETFramework,Version=v4.6": [
+      "Microsoft.IdentityModel.Protocol.Extensions >= 1.0.2.206221351",
+      "System.IdentityModel >= 4.0.0",
+      "System.IdentityModel.Tokens.Jwt >= 4.0.2.206221351"
+    ]
+  },
+  "tools": {},
+  "projectFileToolGroups": {}
+}
