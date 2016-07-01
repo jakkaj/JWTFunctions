@@ -8,11 +8,12 @@
     "net46": {
       "dependencies": {
         "System.IdentityModel.Tokens.Jwt": "4.0.2.206221351",
-        "Microsoft.IdentityModel.Protocol.Extensions" :  "1.0.2.206221351"
+        "Microsoft.IdentityModel.Protocol.Extensions" :  "1.0.2.206221351",
+        "XamlingCore" : "2.1.152"
       },
       "frameworkAssemblies": {
 
-        
+
         "System.IdentityModel": "4.0.0.0"
 
       }

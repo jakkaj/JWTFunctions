@@ -22,6 +22,8 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
         .FirstOrDefault(q => string.Compare(q.Key, "token", true) == 0)
         .Value;
 
+        var a = new XamlingCore.Portable.Util.Lock.XAsyncLock();
+
     // Get request body
     dynamic data = await req.Content.ReadAsAsync<object>();
    // var keys = data?.jwk.keys;
