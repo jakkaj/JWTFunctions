@@ -60,7 +60,7 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
             }
             catch (SecurityTokenValidationException ex)
             {
-                failReason = string.Format("2SecurityTokenValidationException: {0}", ex.Message);
+                failReason = string.Format("1SecurityTokenValidationException: {0}", ex.Message);
             }
             catch (ArgumentException ex)
             {
