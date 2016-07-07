@@ -1,24 +1,16 @@
 {
-  "version": "1.0.0-*",
-  "dependencies": {
-
-    
-  },
-  "frameworks": {
-    "net46": {
-      "dependencies": {
-        "System.IdentityModel.Tokens.Jwt": "4.0.2.206221351",
-        "Microsoft.IdentityModel.Protocol.Extensions" :  "1.0.2.206221351",
-        "AzureFunctionsToolkit": "0.3.3",
-        "Newtonsoft.Json": "9.0.1"
-      },
-      "frameworkAssemblies": {
-
-
-        "System.IdentityModel": "4.0.0.0",
-        "System.Net.Http" : "4.0.0.0"
-      }
+  "disabled": false,
+  "bindings": [
+    {
+      "authLevel": "function",
+      "name": "req",
+      "type": "httpTrigger",
+      "direction": "in"
+    },
+    {
+      "name": "res",
+      "type": "http",
+      "direction": "out"
     }
-  }  
+  ]
 }
-
