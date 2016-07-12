@@ -35,7 +35,7 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
         return req.CreateResponse(HttpStatusCode.BadRequest, "Please pass a token on the query string or in the request body");
     }
     
-    var result = ValidateWithRsaKey(token, rsaKey, issuer, audience);
+    var result = ValidateWithRsaKey(token, rsaKey, issuer, audience); 
 
     var response = req.CreateResponse(HttpStatusCode.OK);
     
