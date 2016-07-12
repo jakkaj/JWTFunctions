@@ -12,7 +12,7 @@ using Microsoft.IdentityModel.Protocols;
 
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
-using AzureFunctionsToolkit.Extensions;
+using AzureFunctionsToolkit.Portable.Extensions;
 using System.Text;
 
 public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log)
