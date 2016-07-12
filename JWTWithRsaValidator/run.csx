@@ -43,7 +43,7 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
 
     var response = req.CreateResponse(HttpStatusCode.OK);
     
-    response.Content = new StringContent(result.Claims.Serialise(), System.Text.Encoding.UTF8, "application/json");
+    response.Content = new StringContent(result.Serialise(), System.Text.Encoding.UTF8, "application/json");
     
     return response;
     
