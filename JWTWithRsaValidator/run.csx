@@ -36,10 +36,6 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
     }
     
     var result = ValidateWithRsaKey(token, rsaKey, issuer, audience);
-   
-    if(!result.IsValid){
-       return req.CreateResponse(HttpStatusCode.OK, result.FailReason);
-    }
 
     var response = req.CreateResponse(HttpStatusCode.OK);
     
