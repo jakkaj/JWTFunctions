@@ -4,6 +4,7 @@
 
 #r "Newtonsoft.Json"
 using System.Net;
+using System.Net.Http;
 using System.IdentityModel.Tokens;
 using System.Security.Claims;
 using Microsoft.IdentityModel.Protocols;
@@ -24,19 +25,28 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
    
     // Get request body
     dynamic data = await req.Content.ReadAsAsync<object>();
-   // var keys = data?.jwk.keys;
-    // Set name to query string or body data
+   
     string token = data?.token;
     string rsaKey = data?.rsaKey;
     string audience = data?.audience;
     string issuer = data?.issuer;
     
+    if(token == null){
+        return req.CreateResponse(HttpStatusCode.BadRequest, "Please pass a token on the query string or in the request body");
+    }
+    
     var result = ValidateWithRsaKey(token, rsaKey, issuer, audience);
    
+    if(!result.IsValid){
+       return req.CreateResponse(HttpStatusCode.OK, result.FailReason);
+    }
+
+    var response = req.CreateResponse(HttpStatusCode.OK);
     
-    return token == null
-        ? req.CreateResponse(HttpStatusCode.BadRequest, "Please pass a token on the query string or in the request body")
-        : req.CreateResponse(HttpStatusCode.OK, result.IsValid ? result.Claims.Serialise() : result.FailReason);
+    response.Content = new StringContent(result.Claims.Serialise(), System.Text.Encoding.UTF8, "application/json");
+    
+    return response;
+    
 }
 
 
