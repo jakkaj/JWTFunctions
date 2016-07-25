@@ -11,7 +11,7 @@ using Microsoft.IdentityModel.Protocols;
 
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
-using AzureFunctionsToolkit.Extensions;
+using ExtensionGoo.Standard.Extensions;
 
 public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log)
 {
